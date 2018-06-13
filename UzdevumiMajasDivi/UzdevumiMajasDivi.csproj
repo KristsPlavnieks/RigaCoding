@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EED99EAA-1A39-4269-ABFD-7E94FFCA71B4}</ProjectGuid>
+    <ProjectGuid>{5E7393FA-3C21-4AE6-BD33-57BE88AFAD5A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PraktiskieUzdevumi</RootNamespace>
-    <AssemblyName>PraktiskieUzdevumi</AssemblyName>
+    <RootNamespace>UzdevumiMajasDivi</RootNamespace>
+    <AssemblyName>UzdevumiMajasDivi</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

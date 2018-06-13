@@ -19,7 +19,7 @@ namespace Day1
             Console.WriteLine(5); //ja grib izvadit skaitli -  neliek pedinas
             Console.WriteLine(4.6); // ja grib decimalu - atdala ar punktu 
             Console.WriteLine("T"); // simbola izvade
-            Console.WriteLine('T'); // ar viena pedinam uztver ka simbolu(var ierakstit tikai vienu simbolu, atstarpe cipars utt.)
+            Console.WriteLine('T'); // uztver ka simbolu(var ierakstit tikai vienu simbolu, atstarpe cipars utt.)
 
             int skaitlis1 = 9223;
             // norada kads bus skaits - int tips- vesels nevar ar atstarpem, var ar lielo burtu vai ciparu ka - Skaitlis1, SkaitlisViens

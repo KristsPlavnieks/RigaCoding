@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EED99EAA-1A39-4269-ABFD-7E94FFCA71B4}</ProjectGuid>
+    <ProjectGuid>{C18C5CD4-AD01-4078-BB27-53458516A545}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PraktiskieUzdevumi</RootNamespace>
-    <AssemblyName>PraktiskieUzdevumi</AssemblyName>
+    <RootNamespace>Karatavas</RootNamespace>
+    <AssemblyName>Karatavas</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Uzdevumi.cs" />
+    <Compile Include="Karatavas.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

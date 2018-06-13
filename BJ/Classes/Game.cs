@@ -8,7 +8,7 @@ namespace BJ.Classes
 {
     class Game
     { // speles logiku 
-        public Dealer Dealer;
+        public Dealer Dealer; // mainigie kas tiks izmantoti sini klase, pieejams visas funkcijas
         public Player Player;
         public Deck Deck;
 
@@ -27,12 +27,62 @@ namespace BJ.Classes
             if (startNew)
             {
                 Console.WriteLine("Uzsākta jauna spēle!");
-                Deck = new Deck();
+                Deck = Deck.TakeNewDeck();
                 Dealer = new Dealer(); // ja ir kludas japarbauda vai visas klases ir publiskas
                 Player = new Player();
+
+                Deck.Shuffle(); // aiziet uz deku, panem shuffle funkciju 
+                Player.GiveCard(Deck.TakeCard()); // iedos divreiz karti 
+                Player.GiveCard(Deck.TakeCard());
+
+                Dealer.GiveCard(Deck.TakeCard(), true);
+                Dealer.GiveCard(Deck.TakeCard());
+
+                while (Player.NeedAnotherCard()) // kamer vajadziga karts tikmer dod, lidz pasaka ne 
+                {
+                    Player.GiveCard(Deck.TakeCard());
+                }
+
+                while (Dealer.NeedAnotherCard())
+                {
+                     Dealer.GiveCard(Deck.TakeCard());
+                }
+
+                CountPoints();
+            
             }
             return startNew;    // ja ne tad izies no cikla ara partraucot vsu speli 
         }
+
+        public void CountPoints()
+        {
+            int playerPoints = Player.CountPoints();
+            int dealerPoints = Dealer.CountPoints();
+
+            if(playerPoints > 21)
+            {
+                Console.WriteLine("Tu zaudeji!");
+            }
+            else if (dealerPoints > 21)
+            {
+                Console.WriteLine("Tu uzvareji!");
+            }
+
+            else if (dealerPoints == playerPoints)
+            {
+                Console.WriteLine("Nav uzvaretaja!");
+            }
+            else if (playerPoints > dealerPoints)
+            {
+                Console.WriteLine("Tu uzvareji!");
+            }
+            else
+            {
+                Console.WriteLine("Tu zaudeji!");
+            }
+        }
+
+
         public static bool GetAnswer(string question) // tad ka bus jautajums var aizstat ar getanswer un nebus japaraksta visas linijas
         {
             Console.WriteLine(question + " (jā/nē) ? "); // var jebkura klase izsaukt jo ir public 

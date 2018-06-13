@@ -34,7 +34,20 @@ namespace BJ.Classes
         /// <returns></returns>
         public int GetValue()
         {
-            return 0;
+            switch (Value)
+            {
+                case "A":   // ari var ar if, witch stradas atrak.
+                    return 11;
+                case "J":
+                case "Q":
+                case "K":
+                    return 10;
+                default:   // atgriezisies pie cipara vertibas. atgriezot skaitli
+                    return Convert.ToInt32(Value); // viss beidzas funkcija.  Break izbeidz funkciju bet nepamet cilku liek ka ir cikls vai switch 
+                
+
+            }
+
         }
     }
 }
